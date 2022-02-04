@@ -14,11 +14,14 @@
 }
 
 .Container {
+    display: flex;
+    flex-direction: column;
+	padding:2px;
     margin: 0 auto;
-    width: 30rem;
-    height: 30rem;
-    background-color: rgb(43, 94, 83);
     border-radius: 2rem;
+    background: linear-gradient(145deg, #3e0068, #340057);
+    box-shadow:  5px 5px 0px #170027,
+                -5px -5px 0px #5d009b;
 }
 
 .Display {
@@ -29,8 +32,57 @@
 }
 
 .Span {
-    background-color: rgba(255, 255, 255, 0.548);
+    font-size: 1.4rem;
+    background-color: rgba(255, 255, 255, .5);
     width: 90%;
     height: 4rem;
     text-align: right;
+    padding: 1rem;
+    box-shadow: inset 5px 5px 0px #170027,
+                inset -5px -5px 0px #5d009b;
+}
+
+.Calculator--Buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    padding: 2rem;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.Single--Button {
+    border-radius: 1rem;
+}
+
+.btn, .btn--operetors {
+    background: #07f49e;
+    height: 4rem;
+    width: 4rem;
+    cursor: pointer;
+    transition: .5s;
+    border-radius: 1rem;
+    border: 0;
+    font-size: 1.2rem;
+}
+
+.eq--button {
+    padding: 0 2rem;
+}
+
+#eq {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.btn:hover, .btn--operetors:hover {
+    transform: scale(1.2);
+}
+
+::-webkit-scrollbar {
+    height: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #07f49e;
 }
